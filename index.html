@@ -3,39 +3,48 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Free Website</title>
+<title>Digital Services & Books</title>
 
 <style>
 body{
     margin:0;
-    font-family: Arial, sans-serif;
+    font-family:Arial, sans-serif;
     background:#f4f6f8;
 }
 header{
     background:#0d6efd;
-    color:white;
-    padding:20px;
+    color:#fff;
+    padding:25px;
     text-align:center;
 }
+nav a{
+    color:white;
+    margin:0 10px;
+    text-decoration:none;
+    font-weight:bold;
+}
 section{
-    padding:30px;
-    max-width:900px;
+    max-width:1100px;
     margin:auto;
+    padding:30px;
 }
 .card{
-    background:white;
+    background:#fff;
     padding:20px;
-    border-radius:10px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.1);
     margin-bottom:20px;
+    border-radius:10px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+}
+.price{
+    color:#0d6efd;
+    font-weight:bold;
 }
 button{
     background:#0d6efd;
-    color:white;
+    color:#fff;
     border:none;
-    padding:12px 20px;
+    padding:10px 18px;
     border-radius:6px;
-    font-size:16px;
     cursor:pointer;
 }
 button:hover{
@@ -46,41 +55,116 @@ footer{
     color:#ccc;
     text-align:center;
     padding:15px;
-    font-size:14px;
 }
 </style>
-
 </head>
+
 <body>
 
 <header>
-    <h1>خوش آمدید</h1>
-    <p>میری فری ویب سائٹ</p>
+<h1>Digital Services & Books</h1>
+<p>Online Professional Services</p>
+<nav>
+<a href="#services">Services</a>
+<a href="#books">Books</a>
+<a href="#payment">Payment</a>
+<a href="#order">Order</a>
+</nav>
 </header>
 
-<section>
-    <div class="card">
-        <h2>About Me</h2>
-        <p>
-            یہ میری پہلی فری ویب سائٹ ہے جو GitHub Pages پر بنی ہے۔
-            میں مستقبل میں یہاں اپنی سروسز اور بلاگ شامل کروں گا۔
-        </p>
-        <button>Contact Me</button>
-    </div>
+<!-- SERVICES -->
+<section id="services">
+<h2>🛠 ہماری سروسز</h2>
 
-    <div class="card">
-        <h2>My Services</h2>
-        <ul>
-            <li>Website Design</li>
-            <li>Blog Setup</li>
-            <li>Free Hosting Guide</li>
-        </ul>
-    </div>
+<div class="card">
+<h3>📄 Data Entry</h3>
+<p class="price">Rs 100 / Page</p>
+<button onclick="order('Data Entry')">Order</button>
+</div>
+
+<div class="card">
+<h3>📑 CV Design</h3>
+<p>Simple CV: <span class="price">Rs 500</span></p>
+<p>Professional CV: <span class="price">Rs 1500</span></p>
+<button onclick="order('CV Design')">Order</button>
+</div>
+
+<div class="card">
+<h3>✍ English / Urdu Composing</h3>
+<p class="price">Rs 80 / Page</p>
+<button onclick="order('English / Urdu Composing')">Order</button>
+</div>
+
+<div class="card">
+<h3>🏫 School Paper Composing</h3>
+<p class="price">Rs 200 / Paper</p>
+<button onclick="order('School Paper Composing')">Order</button>
+</div>
+</section>
+
+<!-- BOOKS -->
+<section id="books">
+<h2>📚 Digital Books</h2>
+
+<div class="card">
+<h3>Computer Basics (PDF)</h3>
+<p class="price">Free</p>
+<a href="books/computer.pdf" download>
+<button>Download</button>
+</a>
+</div>
+
+<div class="card">
+<h3>English Grammar Guide</h3>
+<p class="price">Rs 300</p>
+<button onclick="order('English Grammar Book')">Buy</button>
+</div>
+</section>
+
+<!-- PAYMENT -->
+<section id="payment">
+<h2>💳 Payment Methods</h2>
+
+<div class="card">
+<h3>JazzCash</h3>
+<p>Account Number: <b>0302-7867536</b></p>
+<p>Account Name: <b>Your Name</b></p>
+</div>
+
+<div class="card">
+<h3>Easypaisa</h3>
+<p>Account Number: <b>0302-7867536</b></p>
+<p>Account Name: <b>Your Name</b></p>
+</div>
+
+<div class="card">
+<h3>Crypto (USDT - TRC20)</h3>
+<p>Wallet Address:</p>
+<p><b>TYX1L1gpthc2xnDZGeWY7hnrCwnUvDcVee
+</b></p>
+<p>Network: TRC20</p>
+</div>
+
+<p><b>نوٹ:</b> Payment کے بعد Screenshot یا TxID WhatsApp پر بھیجیں۔</p>
+</section>
+
+<!-- ORDER -->
+<section id="order">
+<h2>📞 Order Now</h2>
+<button onclick="order('New Order')">WhatsApp Order</button>
 </section>
 
 <footer>
-    © 2025 | My Free Website
+© 2025 | Digital Services Website
 </footer>
+
+<script>
+function order(service){
+    let number = "923001234567"; // اپنا WhatsApp نمبر یہاں لکھیں
+    let msg = "السلام علیکم، مجھے " + service + " کی سروس درکار ہے۔";
+    window.open("https://wa.me/" + number + "?text=" + encodeURIComponent(msg));
+}
+</script>
 
 </body>
 </html>
