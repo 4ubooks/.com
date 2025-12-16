@@ -72,7 +72,6 @@ footer{
 </nav>
 </header>
 
-<!-- SERVICES -->
 <section id="services">
 <h2>🛠 ہماری سروسز</h2>
 
@@ -102,16 +101,13 @@ footer{
 </div>
 </section>
 
-<!-- BOOKS -->
 <section id="books">
 <h2>📚 Digital Books</h2>
 
 <div class="card">
 <h3>Computer Basics (PDF)</h3>
 <p class="price">Free</p>
-<a href="books/computer.pdf" download>
-<button>Download</button>
-</a>
+<button disabled>Upload your PDF in /books folder</button>
 </div>
 
 <div class="card">
@@ -121,34 +117,31 @@ footer{
 </div>
 </section>
 
-<!-- PAYMENT -->
 <section id="payment">
 <h2>💳 Payment Methods</h2>
 
 <div class="card">
 <h3>JazzCash</h3>
 <p>Account Number: <b>0302-7867536</b></p>
-<p>Account Name: <b>Your Name</b></p>
+<p>Account Name: <b>MUHAMMAD MUMTAZ</b></p>
 </div>
 
 <div class="card">
 <h3>Easypaisa</h3>
 <p>Account Number: <b>0302-7867536</b></p>
-<p>Account Name: <b>Your Name</b></p>
+<p>Account Name: <b>MUHAMMAD MUMTAZ</b></p>
 </div>
 
 <div class="card">
 <h3>Crypto (USDT - TRC20)</h3>
 <p>Wallet Address:</p>
-<p><b>TYX1L1gpthc2xnDZGeWY7hnrCwnUvDcVee
-</b></p>
+<p><b>TYX1L1gpthc2xnDZGeWY7hnrCwnUvDcVee</b></p>
 <p>Network: TRC20</p>
 </div>
 
 <p><b>نوٹ:</b> Payment کے بعد Screenshot یا TxID WhatsApp پر بھیجیں۔</p>
 </section>
 
-<!-- ORDER -->
 <section id="order">
 <h2>📞 Order Now</h2>
 <button onclick="order('New Order')">WhatsApp Order</button>
@@ -160,7 +153,7 @@ footer{
 
 <script>
 function order(service){
-    let number = "923001234567"; // اپنا WhatsApp نمبر یہاں لکھیں
+    let number = "923075807887"; // Replace with your WhatsApp number
     let msg = "السلام علیکم، مجھے " + service + " کی سروس درکار ہے۔";
     window.open("https://wa.me/" + number + "?text=" + encodeURIComponent(msg));
 }
